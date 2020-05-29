@@ -105,7 +105,7 @@ const LoginBlock = ({ navigation }: Navigation) => {
       <Header>베네듀 계정으로 로그인해주세요</Header>
       <TextInputWrapper>
         <InputIcon name="mail-outline" size={18} color="#707070" />
-        <Input keyboardType="email-address" placeholder="이메일" value={username} onChangeText={(text): void => setUsername(text)} />
+        <Input keyboardType="email-address" placeholder="이메일" value={username} onChangeText={(text): void => setUsername(text)} autoCapitalize='none' />
       </TextInputWrapper>
       <TextInputWrapper>
         <InputIcon name="lock-outline" size={18} color="#707070" />
@@ -160,7 +160,7 @@ export default ({ navigation }: Navigation): JSX.Element => {
   return (
     <Container>
       <ContentWrapper>
-        <PandaWithBee source={require('assets/pandaWithBee.png')} resizeMode="contain" screenHeight={Dimensions.get('window').height} />
+        <PandaWithBee source={require('assets/pandaWithBee.png')} resizeMode="contain" screenHeight={height} />
         <LoginBlock {...{ navigation }} />
       </ContentWrapper>
       <BGFitter>
